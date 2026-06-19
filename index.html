@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunco Score Tracker — Free Online Running Score Calculator</title>
+<meta name="description" content="Free online Bunco score tracker. Track running points per round for 2-12 players, no printable score sheets, no account, runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tonatihuai2026.github.io/bunco-night-score-tracker/">
+<meta property="og:title" content="Bunco Score Tracker — Free Online Running Score Calculator">
+<meta property="og:description" content="Free online Bunco score tracker for game night. Track running points per round for 2-12 players, no account needed.">
+<meta name="twitter:card" content="summary">
+<meta name="google-adsense-account" content="ca-pub-8781477226668093">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8781477226668093" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bunco Score Tracker",
+  "url": "https://tonatihuai2026.github.io/bunco-night-score-tracker/",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free online Bunco score tracker. Track running points per round for 2-12 players, no account needed.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Bunco Score Tracker</h1>
+  <p>Free running-score calculator for Bunco night — no printable score sheets, no account.</p>
+</header>
+<main>
+  <h2>Track Your Game</h2>
+  <div class="round-controls no-print" style="margin-top:0;">
+    <label for="teamCount" style="align-self:center;">Number of players:</label>
+    <select id="teamCount"></select>
+  </div>
+  <div class="teams" id="teams"></div>
+
+  <div class="round-controls">
+    <button id="addRound">Add Round to Running Score</button>
+    <button class="secondary" id="resetAll">Reset Game</button>
+  </div>
+
+  <h2 id="historyHeading" style="display:none;">Running Score</h2>
+  <table class="history no-print" id="historyTable" style="display:none;">
+    <thead><tr id="historyHead"></tr></thead>
+    <tbody id="historyBody"></tbody>
+  </table>
+  <div class="grand-totals" id="grandTotals"></div>
+
+  <p class="no-print" style="margin-top:2rem; font-size:.85rem; color:#777;">
+    Enter each player's (or table's) net points for the round — wins, Buncos, and
+    mini-Buncos combined — and add it to the running score. Everything runs in your
+    browser — nothing you type is sent anywhere.
+  </p>
+
+  <h2>How Bunco Scoring Works</h2>
+  <div class="variant-card">
+    <strong>Per-round points</strong><br>
+    Each round, a win is usually worth 1 point. Rolling three-of-a-kind on the round's
+    target number ("a Bunco") is typically worth 21 points, and three-of-a-kind on any
+    other number ("a mini-Bunco" or "baby Bunco") is usually worth 5 points. Add up a
+    player's or table's total for the round and enter that single net number here.
+  </div>
+  <div class="variant-card">
+    <strong>Most points wins, most Buncos is a tiebreaker</strong><br>
+    At the end of the night, the player with the most total points usually wins, with most
+    Buncos rolled as the standard tiebreaker. This tracker keeps the running point total
+    per round so you always know where everyone stands — track Bunco counts separately on
+    paper if your house rules use them as a tiebreaker.
+  </div>
+  <div class="variant-card">
+    <strong>House variants</strong><br>
+    Bunco scoring varies a lot table to table (point values for wins/losses/Buncos, win
+    bonuses for a "Bunco Bonanza," carryover prizes). Whatever your table's rule, this
+    tracker only needs the final net point number per player per round.
+  </div>
+</main>
+<footer>
+  &copy; 2026 Bunco Score Tracker. Not affiliated with any publisher of Bunco rules.
+</footer>
+<script>
+window.TRACKER_CONFIG = { gameSlug: "bunco", minTeams: 2, maxTeams: 12, defaultTeams: 4 };
+</script>
+<script src="tracker.js"></script>
+</body>
+</html>
