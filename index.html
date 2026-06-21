@@ -34,13 +34,20 @@
 </header>
 <main>
   <h2>Track Your Game</h2>
-  <div class="round-controls no-print" style="margin-top:0;">
-    <label for="teamCount" style="align-self:center;">Number of players:</label>
-    <select id="teamCount"></select>
+  <div class="setup-row no-print">
+    <label for="teamCount">Number of players</label>
+    <select id="teamCount" aria-label="Number of players"></select>
   </div>
+
+  <p class="start-hint no-print">
+    <strong>Quick start:</strong>
+    <span>Name your players, type each one's points for the hand, then tap
+    <em>Add Round</em>. Their running totals build up below.</span>
+  </p>
+
   <div class="teams" id="teams"></div>
 
-  <div class="round-controls">
+  <div class="round-controls no-print">
     <button id="addRound">Add Round to Running Score</button>
     <button class="secondary" id="resetAll">Reset Game</button>
   </div>
@@ -52,7 +59,7 @@
   </table>
   <div class="grand-totals" id="grandTotals"></div>
 
-  <p class="no-print" style="margin-top:2rem; font-size:.85rem; color:#777;">
+  <p class="no-print muted" style="margin-top:2rem; font-size:.88rem;">
     Enter each player's (or table's) net points for the round — wins, Buncos, and
     mini-Buncos combined — and add it to the running score. Everything runs in your
     browser — nothing you type is sent anywhere.
